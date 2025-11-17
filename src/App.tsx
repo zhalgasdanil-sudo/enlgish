@@ -48,20 +48,20 @@ export default function App() {
 
   const touristPlaces = [
     {
-      title: 'Байтерек',
-      description: 'Символ Астаны высотой 105 метров. Смотровая площадка на высоте 97 метров предлагает захватывающий панорамный вид на весь город.',
+      title: 'Baiterek',
+      description: 'Iconic 105-meter tower and symbol of Astana. The observation deck at 97 meters offers breathtaking panoramic views of the entire city.',
       imageUrl: 'https://images.unsplash.com/photo-1677842296338-eeb8c866d22c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxCYXl0ZXJlayUyMFRvd2VyJTIwQXN0YW5hfGVufDF8fHx8MTc2MzM5NDMxMXww&ixlib=rb-4.1.0&q=80&w=1080',
       icon: Landmark
     },
     {
-      title: 'Хан Шатыр',
-      description: 'Крупнейшее шатровое сооружение в мире. Внутри находится торгово-развлекательный центр с тропическим пляжем и аквапарком.',
+      title: 'Khan Shatyr',
+      description: 'World\'s largest tent structure. Inside you\'ll find a shopping center, tropical beach, and waterpark with year-round climate control.',
       imageUrl: 'https://images.unsplash.com/photo-1684453728966-1a89831fe240?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxLaGFuJTIwU2hhdHlyJTIwQXN0YW5hfGVufDF8fHx8MTc2MzM5NDMxMnww&ixlib=rb-4.1.0&q=80&w=1080',
       icon: Building2
     },
     {
-      title: 'Национальный музей',
-      description: 'Один из крупнейших музеев Центральной Азии, представляющий историю и культуру Казахстана от древности до наших дней.',
+      title: 'National Museum',
+      description: 'One of Central Asia\'s largest museums showcasing Kazakhstan\'s rich history and culture from ancient times to the present day.',
       imageUrl: 'https://images.unsplash.com/photo-1738958047425-dd5dbefa2f78?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25jZXJ0JTIwaGFsbCUyMGludGVyaW9yfGVufDF8fHx8MTc2MzM5NTYxNXww&ixlib=rb-4.1.0&q=80&w=1080',
       icon: Camera
     }
@@ -69,20 +69,20 @@ export default function App() {
 
   const shoppingMalls = [
     {
-      title: 'Мега Силк Вей',
-      description: 'Крупнейший торговый центр в Казахстане площадью 180,000 м². Более 300 магазинов, кинотеатр IMAX, боулинг и ледовый каток.',
+      title: 'Mega Silk Way',
+      description: 'Kazakhstan\'s largest shopping mall with 180,000 m². Over 300 shops, IMAX cinema, bowling, and ice skating rink.',
       imageUrl: 'https://images.unsplash.com/photo-1694064500485-405140238c9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaG9wcGluZyUyMG1hbGwlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NjMzNzE3OTB8MA&ixlib=rb-4.1.0&q=80&w=1080',
       icon: ShoppingBag
     },
     {
-      title: 'Сарыарка',
-      description: 'Современный ТРЦ в центре города с премиальными брендами, ресторанами высокой кухни и развлекательными зонами.',
+      title: 'Saryarka',
+      description: 'Modern shopping center in the city with premium brands, fine dining restaurants, and entertainment zones.',
       imageUrl: 'https://images.unsplash.com/photo-1642287040066-2bd340523289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjaXR5JTIwbmlnaHR8ZW58MXx8fHwxNzYzMzYyODA1fDA&ixlib=rb-4.1.0&q=80&w=1080',
       icon: Coffee
     },
     {
-      title: 'Керуен',
-      description: 'Торгово-развлекательный комплекс с аквапарком "Алау", боулингом, кинотеатрами и широким выбором магазинов.',
+      title: 'Keruen',
+      description: 'Entertainment complex featuring Alau waterpark, bowling, cinemas, and a wide variety of shopping options.',
       imageUrl: 'https://images.unsplash.com/photo-1628630472000-50abc274e3d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBwYXJrfGVufDF8fHx8MTc2MzM5NTYxNnww&ixlib=rb-4.1.0&q=80&w=1080',
       icon: Music
     }
@@ -91,19 +91,19 @@ export default function App() {
   const hotels = [
     {
       title: 'The Ritz-Carlton',
-      description: 'Роскошный 5-звездочный отель с панорамным видом на город, спа-центром мирового класса и изысканными ресторанами.',
+      description: 'Luxury 5-star hotel with panoramic city views, world-class spa center, and exquisite dining restaurants.',
       imageUrl: 'https://images.unsplash.com/photo-1561501900-3701fa6a0864?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBob3RlbHxlbnwxfHx8fDE3NjMzOTU2MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
       icon: Hotel
     },
     {
       title: 'Rixos President',
-      description: 'Премиальный отель с уникальным дизайном, включающий множество ресторанов, конференц-залы и wellness-центр.',
+      description: 'Premium hotel with unique design, featuring multiple restaurants, conference halls, and wellness center.',
       imageUrl: 'https://images.unsplash.com/photo-1666032119084-82351976a922?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwZWxlZ2FudHxlbnwxfHx8fDE3NjMzMzE2NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
       icon: Utensils
     },
     {
       title: 'Hilton Astana',
-      description: 'Международный отель премиум-класса с современным дизайном, конференц-залами мирового уровня и роскошным сервисом.',
+      description: 'International premium hotel with modern design, world-class conference facilities, and luxury service.',
       imageUrl: 'https://images.unsplash.com/photo-1628630472000-50abc274e3d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBwYXJrfGVufDF8fHx8MTc2MzM5NTYxNnww&ixlib=rb-4.1.0&q=80&w=1080',
       icon: Trees
     }
@@ -303,7 +303,7 @@ export default function App() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 >
-                  Туристические места
+                  Tourist Attractions
                 </motion.h2>
                 <motion.p
                   className="text-slate-300 max-w-3xl mx-auto text-xl"
@@ -312,7 +312,7 @@ export default function App() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                 >
-                  Откройте для себя уникальные архитектурные шедевры и культурные достопримечательности столицы
+                  Discover unique architectural masterpieces and cultural landmarks of our capital
                 </motion.p>
               </motion.div>
 
@@ -339,7 +339,7 @@ export default function App() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 >
-                  Торгово-развлекательные центры
+                  Shopping & Entertainment
                 </motion.h2>
                 <motion.p
                   className="text-slate-300 max-w-3xl mx-auto text-xl"
@@ -348,7 +348,7 @@ export default function App() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                 >
-                  Современные ТРЦ с мировыми брендами, развлечениями и ресторанами
+                  Modern centers with world brands, entertainment, and fine dining
                 </motion.p>
               </motion.div>
 
@@ -375,7 +375,7 @@ export default function App() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 >
-                  Гостиницы и рестораны
+                  Hotels & Dining
                 </motion.h2>
                 <motion.p
                   className="text-slate-300 max-w-3xl mx-auto text-xl"
@@ -384,7 +384,7 @@ export default function App() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                 >
-                  Роскошные отели и рестораны мирового класса для незабываемого отдыха
+                  Luxury hotels and world-class restaurants for an unforgettable experience
                 </motion.p>
               </motion.div>
 
@@ -411,7 +411,7 @@ export default function App() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 >
-                  Инфраструктура города
+                  City Infrastructure
                 </motion.h2>
                 <motion.p
                   className="text-slate-300 max-w-3xl mx-auto text-xl"
@@ -420,79 +420,79 @@ export default function App() {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                 >
-                  Современная инфраструктура для комфортной жизни и развития
+                  Modern infrastructure for comfortable living and development
                 </motion.p>
               </motion.div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <InfoSection
                   icon={Train}
-                  title="Транспорт"
+                  title="Transportation"
                   items={[
-                    'Международный аэропорт Нурсултан Назарбаев',
-                    'Современная система общественного транспорта',
-                    'Развитая сеть автомобильных дорог',
-                    'Железнодорожный вокзал с высокоскоростными поездами'
+                    'Nursultan Nazarbayev International Airport',
+                    'Modern public transportation system',
+                    'Extensive road network',
+                    'Railway station with high-speed trains'
                   ]}
                   delay={0}
                 />
 
                 <InfoSection
                   icon={Wifi}
-                  title="Цифровые технологии"
+                  title="Digital Technologies"
                   items={[
-                    'Бесплатный Wi-Fi в общественных местах',
-                    'Система "Умный город"',
-                    'Электронное правительство',
-                    '5G покрытие в центральных районах'
+                    'Free Wi-Fi in public areas',
+                    'Smart City system',
+                    'E-government services',
+                    '5G coverage in central districts'
                   ]}
                   delay={0.1}
                 />
 
                 <InfoSection
                   icon={Heart}
-                  title="Здравоохранение"
+                  title="Healthcare"
                   items={[
-                    'Современные медицинские центры',
-                    'Клиники международного уровня',
-                    'Специализированные госпитали',
-                    'Центры диагностики с новейшим оборудованием'
+                    'Modern medical centers',
+                    'International clinics',
+                    'Specialized hospitals',
+                    'Diagnostic centers with latest equipment'
                   ]}
                   delay={0.2}
                 />
 
                 <InfoSection
                   icon={Building2}
-                  title="Образование"
+                  title="Education"
                   items={[
-                    'Назарбаев Университет',
-                    'Международные школы',
-                    'Научно-исследовательские центры',
-                    'Современные библиотеки и медиатеки'
+                    'Nazarbayev University',
+                    'International schools',
+                    'Research centers',
+                    'Modern libraries and media centers'
                   ]}
                   delay={0}
                 />
 
                 <InfoSection
                   icon={Trees}
-                  title="Парки и отдых"
+                  title="Parks & Recreation"
                   items={[
-                    'Центральный парк с велодорожками',
-                    'Набережная реки Есиль',
-                    'Ботанический сад',
-                    'Спортивные комплексы и стадионы'
+                    'Central park with bike paths',
+                    'Esil River embankment',
+                    'Botanical garden',
+                    'Sports complexes and stadiums'
                   ]}
                   delay={0.1}
                 />
 
                 <InfoSection
                   icon={Zap}
-                  title="Экология"
+                  title="Environment"
                   items={[
-                    'Программа "Зеленая столица"',
-                    'Солнечные и ветровые электростанции',
-                    'Система раздельного сбора отходов',
-                    'Экологически чистый общественный транспорт'
+                    '"Green Capital" program',
+                    'Solar and wind power stations',
+                    'Waste separation system',
+                    'Eco-friendly public transport'
                   ]}
                   delay={0.2}
                 />
@@ -515,7 +515,7 @@ export default function App() {
                   className="text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
                   whileHover={{ scale: 1.05 }}
                 >
-                  Почему Астана?
+                  Why Astana?
                 </motion.h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -531,9 +531,9 @@ export default function App() {
                     >
                       <TrendingUp className="w-8 h-8 text-blue-400" />
                     </motion.div>
-                    <h3 className="mb-3 text-blue-400">Быстрое развитие</h3>
+                    <h3 className="mb-3 text-blue-400">Rapid Growth</h3>
                     <p className="text-slate-300">
-                      Один из самых быстрорастущих городов мира с современной инфраструктурой
+                      One of the world's fastest-growing cities with modern infrastructure
                     </p>
                   </motion.div>
 
@@ -549,9 +549,9 @@ export default function App() {
                     >
                       <Users className="w-8 h-8 text-purple-400" />
                     </motion.div>
-                    <h3 className="mb-3 text-purple-400">Многонациональность</h3>
+                    <h3 className="mb-3 text-purple-400">Multiculturalism</h3>
                     <p className="text-slate-300">
-                      Город, где встречаются культуры и традиции разных народов
+                      A city where cultures and traditions of different nations meet
                     </p>
                   </motion.div>
 
@@ -567,9 +567,9 @@ export default function App() {
                     >
                       <Plane className="w-8 h-8 text-pink-400" />
                     </motion.div>
-                    <h3 className="mb-3 text-pink-400">Транспортный хаб</h3>
+                    <h3 className="mb-3 text-pink-400">Transport Hub</h3>
                     <p className="text-slate-300">
-                      Стратегическое расположение между Европой и Азией
+                      Strategic location between Europe and Asia
                     </p>
                   </motion.div>
                 </div>
@@ -590,10 +590,10 @@ export default function App() {
                 className="mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
                 whileHover={{ scale: 1.05 }}
               >
-                АСТАНА
+                ASTANA
               </motion.h3>
               <p className="text-slate-400 mb-6 text-lg">
-                Город будущего, который создается сегодня
+                The city of the future is being created today
               </p>
               <motion.div
                 className="flex gap-6 justify-center text-slate-500"
