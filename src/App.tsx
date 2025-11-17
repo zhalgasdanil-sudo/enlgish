@@ -277,7 +277,7 @@ export default function App() {
 
           {/* Parallax Text Divider */}
           <div className="py-16 overflow-hidden">
-            <ParallaxText baseVelocity={-1}>АСТАНА • ASTANA • АСТАНА</ParallaxText>
+            <ParallaxText baseVelocity={-1}>ASTANA • THE FUTURE • ASTANA</ParallaxText>
           </div>
 
           {/* Khan Shatyr Interactive Section */}
