@@ -17,7 +17,7 @@ export function KhanShatyrSection() {
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
   return (
-    <section ref={containerRef} className="relative py-32 px-4 overflow-hidden min-h-screen flex items-center">
+    <section ref={containerRef} className="relative py-32 px-4 overflow-hidden min-h-screen flex items-center bg-gradient-to-b from-slate-950 to-slate-900">
       <div className="max-w-7xl mx-auto w-full">
         <motion.div
           className="text-center mb-16"
@@ -27,36 +27,44 @@ export function KhanShatyrSection() {
           transition={{ duration: 0.8 }}
         >
           <motion.h2
-            className="mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent"
+            className="mb-6 bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-500 bg-clip-text text-transparent text-5xl md:text-6xl font-black"
             whileHover={{ scale: 1.05 }}
           >
-            Хан Шатыр
+            Khan Shatyr
           </motion.h2>
           <motion.p
             className="text-slate-300 max-w-3xl mx-auto text-xl"
             data-cursor="text"
           >
-            Уникальное архитектурное чудо - крупнейшее шатровое сооружение в мире
+            The world's largest tent structure - an architectural masterpiece embodying Kazakhstan's modern vision and heritage.
           </motion.p>
         </motion.div>
 
         <motion.div
-          className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl"
+          className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl group"
           style={{ scale, y }}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
-          {/* Morph/Blur/3D transition between exterior and interior */}
+          {/* Exterior View */}
           <motion.div
             className="absolute inset-0"
-            style={{ opacity: opacity1, filter: `blur(${isHovered ? 20 : 0}px)` }}
-            animate={{ scale: isHovered ? 1.05 : 1, rotateY: isHovered ? 30 : 0 }}
-            transition={{ duration: 1.2 }}
+            style={{ opacity: opacity1 }}
+            animate={{ 
+              filter: isHovered ? 'blur(15px) brightness(0.8)' : 'blur(0px) brightness(1)',
+              scale: isHovered ? 1.08 : 1
+            }}
+            transition={{ duration: 0.8 }}
           >
-            <ImageWithFallback
-              src="https://images.unsplash.com/photo-1684453728966-1a89831fe240?auto=format&fit=crop&w=1200&q=80"
-              alt="Khan Shatyr exterior"
-              className="w-full h-full object-cover"
+            <motion.div
+              className="w-full h-full"
+              style={{
+                backgroundImage: 'url(https://images.unsplash.com/photo-1576021160550-2173dba999ef?w=1200&h=800&fit=crop)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
             <div className="absolute bottom-8 left-8 right-8">
               <motion.h3
                 className="text-white mb-2 text-2xl font-bold drop-shadow-lg"
@@ -65,19 +73,65 @@ export function KhanShatyrSection() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
-                Снаружи
+                Exterior View
               </motion.h3>
               <motion.p
-                className="text-slate-300 text-lg drop-shadow"
+                className="text-cyan-300 text-lg drop-shadow"
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
               >
-                Высота 150 метров • Площадь 140,000 м²
+                Height: 150m • Area: 127,000 m² • Opened: 2010
               </motion.p>
             </div>
           </motion.div>
+
+          {/* Interior View */}
+          <motion.div
+            className="absolute inset-0"
+            style={{ opacity: opacity2 }}
+            animate={{ 
+              filter: isHovered ? 'blur(0px) brightness(1)' : 'blur(15px) brightness(0.8)',
+              scale: isHovered ? 1 : 0.92
+            }}
+            transition={{ duration: 0.8 }}
+          >
+            <motion.div
+              className="w-full h-full"
+              style={{
+                backgroundImage: 'url(https://images.unsplash.com/photo-1570129477492-45f003313e78?w=1200&h=800&fit=crop)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+            <div className="absolute bottom-8 left-8 right-8">
+              <motion.h3
+                className="text-white mb-2 text-2xl font-bold drop-shadow-lg"
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+              >
+                Interior Experience
+              </motion.h3>
+              <motion.p
+                className="text-cyan-300 text-lg drop-shadow"
+                initial={{ x: 50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+              >
+                300+ Shops • Tropical Beach • Entertainment Zone
+              </motion.p>
+            </div>
+          </motion.div>
+
+          {/* Hover Indicator */}
+          <motion.div
+            className="absolute inset-0 border-2 border-cyan-400/0 rounded-3xl pointer-events-none transition-all duration-500 group-hover:border-cyan-400/50"
+          />
           <motion.div
             className="absolute inset-0"
             style={{ opacity: opacity2, filter: `blur(${isHovered ? 0 : 20}px)` }}
@@ -112,87 +166,54 @@ export function KhanShatyrSection() {
             </div>
           </motion.div>
 
-          {/* Hover indicator */}
+          {/* Hover Indicator */}
           <motion.div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5 }}
-          >
-            <motion.div
-              className="px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20"
-              animate={{
-                scale: [1, 1.1, 1],
-                opacity: isHovered ? 0 : [0.7, 1, 0.7],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-              }}
-            >
-              <p className="text-white">Наведите для просмотра интерьера</p>
-            </motion.div>
-          </motion.div>
-
-          {/* Decorative elements */}
-          <motion.div
-            className="absolute top-8 right-8 w-24 h-24 border-2 border-white/30 rounded-full"
-            animate={{
-              rotate: 360,
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              rotate: { duration: 20, repeat: Infinity, ease: 'linear' },
-              scale: { duration: 3, repeat: Infinity },
-            }}
+            className="absolute inset-0 border-2 border-cyan-400/0 rounded-3xl pointer-events-none transition-all duration-500 group-hover:border-cyan-400/50"
           />
         </motion.div>
 
-        {/* Features Grid */}
+        {/* Info Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          {[
+            { value: '300+', label: 'Shops & Brands', icon: '🛍️' },
+            { value: '50+', label: 'Restaurants', icon: '🍽️' },
+            { value: '30M', label: 'Annual Visitors', icon: '👥' },
+          ].map((item, idx) => (
+            <motion.div
+              key={idx}
+              className="p-6 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 text-center hover:border-cyan-400/50 transition-all"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
+              whileHover={{ y: -5, scale: 1.02 }}
+            >
+              <div className="text-3xl mb-2">{item.icon}</div>
+              <div className="text-2xl font-black text-cyan-400 mb-1">{item.value}</div>
+              <div className="text-slate-400 text-sm">{item.label}</div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Facts */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12"
+          className="mt-16 p-8 rounded-2xl bg-gradient-to-br from-cyan-500/5 to-blue-500/5 border border-cyan-400/10"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
         >
-          {[
-            { title: '300+', subtitle: 'Магазинов' },
-            { title: '5000+', subtitle: 'Посетителей в день' },
-            { title: '35°C', subtitle: 'Температура на пляже' },
-          ].map((item, index) => (
-            <motion.div
-              key={index}
-              className="p-6 rounded-2xl bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-purple-400/20 text-center"
-              whileHover={{ scale: 1.05, y: -10 }}
-              transition={{ duration: 0.3 }}
-            >
-              <motion.h3
-                className="mb-2 text-purple-400"
-                whileHover={{ scale: 1.1 }}
-              >
-                {item.title}
-              </motion.h3>
-              <p className="text-slate-300">{item.subtitle}</p>
-            </motion.div>
-          ))}
+          <h3 className="text-2xl font-bold text-cyan-300 mb-6">Facts About Khan Shatyr</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-300">
+            <p>• Designed by renowned architect Norman Foster</p>
+            <p>• Made of advanced ETFE plastic material</p>
+            <p>• Climate-controlled tropical environment</p>
+            <p>• World's largest tent structure</p>
+            <p>• Features indoor beach resort with 35°C water</p>
+            <p>• Universal symbol of Astana's modernity</p>
+          </div>
         </motion.div>
       </div>
-
-      {/* Background decoration */}
-      <motion.div
-        className="absolute top-1/4 -left-32 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl"
-        animate={{
-          x: [0, 50, 0],
-          y: [0, -50, 0],
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-      />
     </section>
   );
 }
